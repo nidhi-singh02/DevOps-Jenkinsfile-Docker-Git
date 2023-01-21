@@ -8,7 +8,7 @@ pipeline {
               script {
                  commit_id = sh(script: "git rev-parse --short HEAD", returnStdout: true).trim()
               }
-             // remove previous containers
+             // remove previous containerss
                
              // BUILD the Docker image
              sh "sudo docker build -t image-name:${commit_id} ."
